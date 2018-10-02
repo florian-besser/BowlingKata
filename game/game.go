@@ -7,8 +7,10 @@ type Game struct {
 
 func (game *Game) GetScore() int {
 	sum := 0
-	for i := 0; i < 21; i++ {
-		sum += game.rolls[i]
+	index := 0
+	for frame := 0; frame < 10; frame++ {
+		sum += game.rolls[index]
+		index++
 	}
 	return sum
 }
