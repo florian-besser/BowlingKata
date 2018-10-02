@@ -29,3 +29,13 @@ func Test_Spare_NextRollCountsTwice(t *testing.T) {
 
 	assert.Equal(t, g.GetScore(), 22)
 }
+
+func Test_Strike_NextTwoRollsCountTwice(t *testing.T) {
+	g := Game{}
+
+	g.Roll(10)
+	g.Roll(4)
+	g.Roll(3)
+
+	assert.Equal(t, g.GetScore(), 24)
+}
