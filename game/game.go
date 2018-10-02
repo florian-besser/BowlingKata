@@ -3,7 +3,6 @@ package game
 type Game struct {
 	rolls      [21]int
 	rollsIndex int
-	sum        int
 }
 
 func (game *Game) GetScore() int {
@@ -17,5 +16,4 @@ func (game *Game) GetScore() int {
 func (game *Game) Roll(roll int) {
 	game.rolls[game.rollsIndex] = roll
 	game.rollsIndex++
-	game.sum += roll
 }
