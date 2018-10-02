@@ -1,12 +1,13 @@
 package game
 
 type Game struct {
+	sum int
 }
 
 func (game *Game) GetScore() int {
-	return 0
+	return game.sum
 }
 
 func (game *Game) Roll(roll int) {
-
+	game.sum += roll
 }
