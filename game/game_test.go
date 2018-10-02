@@ -19,3 +19,13 @@ func Test_TwoRolls_ScoreIsSum(t *testing.T) {
 
 	assert.Equal(t, g.GetScore(), 7)
 }
+
+func Test_Spare_NextRollCountsTwice(t *testing.T) {
+	g := Game{}
+
+	g.Roll(3)
+	g.Roll(7)
+	g.Roll(6)
+
+	assert.Equal(t, g.GetScore(), 22)
+}
