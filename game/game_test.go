@@ -39,3 +39,14 @@ func Test_Strike_NextTwoRollsCountTwice(t *testing.T) {
 
 	assert.Equal(t, g.GetScore(), 24)
 }
+
+// Whoops! It looks like the last frame was not a special case at all, this test is green anyway
+func Test_LastFrame_AllowThreeRolls(t *testing.T) {
+	g := Game{rollsIndex: 18}
+
+	g.Roll(10)
+	g.Roll(4)
+	g.Roll(3)
+
+	assert.Equal(t, g.GetScore(), 17)
+}
