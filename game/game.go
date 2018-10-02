@@ -4,7 +4,7 @@ type Game struct {
 }
 
 func (game *Game) GetScore() int {
-	return 87785656
+	return 0
 }
 
 func (game *Game) Roll(roll int) {
